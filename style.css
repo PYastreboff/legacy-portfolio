@@ -17,6 +17,36 @@
   --titleColour: rgb(29, 112, 255);
 }
 
+
+/*scroll animations */
+.hidden {
+  opacity: 0;
+  transition: all 1s;
+  filter: blur(15px);
+  transform: translateX(-50%);
+}
+
+.hiddens {
+  opacity: 0;
+  transition: all 1s;
+  transition-delay: .4s;
+  filter: blur(7px);
+  transform: translateX(-25%);
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0%);
+}
+
+@media(prefers-reduced-motion) {
+  .hidden, .hiddens {
+    transition: none;
+  }
+}
+
+
 body {
   background-color: black;
 }
